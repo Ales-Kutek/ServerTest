@@ -1,0 +1,6 @@
+/home/ales/RiderProjects/ServerTest2/ServerTest2/bin/Debug/ServerTest2.exe
+/home/ales/RiderProjects/ServerTest2/ServerTest2/bin/Debug/ServerTest2.pdb
+/home/ales/RiderProjects/ServerTest2/ServerTest2/obj/Debug/ServerTest2.csprojResolveAssemblyReference.cache
+/home/ales/RiderProjects/ServerTest2/ServerTest2/obj/Debug/ServerTest2.csproj.CoreCompileInputs.cache
+/home/ales/RiderProjects/ServerTest2/ServerTest2/obj/Debug/ServerTest2.exe
+/home/ales/RiderProjects/ServerTest2/ServerTest2/obj/Debug/ServerTest2.pdb

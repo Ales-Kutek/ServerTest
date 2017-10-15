@@ -1,0 +1,6 @@
+/home/ales/RiderProjects/ClientTest2/ClientTest2/bin/Debug/ClientTest2.exe
+/home/ales/RiderProjects/ClientTest2/ClientTest2/bin/Debug/ClientTest2.pdb
+/home/ales/RiderProjects/ClientTest2/ClientTest2/obj/Debug/ClientTest2.csprojResolveAssemblyReference.cache
+/home/ales/RiderProjects/ClientTest2/ClientTest2/obj/Debug/ClientTest2.csproj.CoreCompileInputs.cache
+/home/ales/RiderProjects/ClientTest2/ClientTest2/obj/Debug/ClientTest2.exe
+/home/ales/RiderProjects/ClientTest2/ClientTest2/obj/Debug/ClientTest2.pdb
