@@ -8,15 +8,15 @@ namespace ServerTest2.App
 {
     public class ServerLoop
     {
-        public void Process(List <TcpClient> clients)
+        public void Process(List <Client> clients)
         {
             foreach (var client in clients)
             {
-                string buffer = ReadBuffer(client);
+                string buffer = ReadBuffer(client.GetTcpClient());
 
                 if (buffer.Length != 0)
                 {
-                    ProcessRequest(buffer, client);
+                    ProcessRequest(buffer, client.GetTcpClient());
                 }
             }
         }
@@ -35,7 +35,6 @@ namespace ServerTest2.App
         {
             List<int> buffer = new List<int>();
             NetworkStream stream = client.GetStream();
-            int readByte;
 
             while (stream.DataAvailable)
             {

@@ -7,7 +7,7 @@ namespace ServerTest2.App
 {
     public class Listen
     {
-        public void Process(List<TcpClient> clients)
+        public void Process(List<Client> clients)
         {
             TcpListener listener = null;
 
@@ -24,7 +24,7 @@ namespace ServerTest2.App
             }
         }
 
-        private void ListeningProcess(TcpListener listener, List<TcpClient> clients)
+        private void ListeningProcess(TcpListener listener, List<Client> clients)
         {
             while (true)
             {
@@ -33,7 +33,7 @@ namespace ServerTest2.App
                     if (listener.Pending())
                     {
                         Console.WriteLine("client is pending..");
-                        TcpClient client = listener.AcceptTcpClient();
+                        Client client = new Client(listener.AcceptTcpClient());
 
                         clients.Add(client);
                         Console.WriteLine("Client added to list");

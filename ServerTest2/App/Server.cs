@@ -15,11 +15,11 @@ namespace ServerTest2.App
 {
     public class Server
     {
-        private List<TcpClient> _tcpClients = new List<TcpClient>();
+        private List<Client> _tcpClients = new List<Client>();
 
         private Task listeningTask;
 
-        public List<TcpClient> GetTcpClients()
+        public List<Client> GetTcpClients()
         {
             return this._tcpClients;
         }
