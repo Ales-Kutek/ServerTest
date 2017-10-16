@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Net.Sockets;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -27,7 +28,7 @@ namespace ServerTest2.App
 
         private void ProcessRequest(string buffer, TcpClient client)
         {
-            Console.WriteLine(buffer);
+//            Console.WriteLine(buffer);
 
             byte[] bytes = Encoding.ASCII.GetBytes("OK");
 
@@ -56,7 +57,7 @@ namespace ServerTest2.App
 
             byte[] byteResult = Encoding.ASCII.GetBytes(result);
 
-            Console.WriteLine("ms");
+            Console.WriteLine(byteResult.Length);
 
             MemoryStream ms = new MemoryStream();
             ms.Write(byteResult, 0, byteResult.Length);
@@ -64,9 +65,18 @@ namespace ServerTest2.App
 
             IFormatter formatter = new BinaryFormatter();
 
+            ms.Position = 0;
+
             Console.WriteLine("beofre");
 
-            var obj = (MessageEntity) formatter.Deserialize(ms);
+            try
+            {
+                var obj = (MessageEntity) formatter.Deserialize(ms);
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
 
             Console.WriteLine("after");
 

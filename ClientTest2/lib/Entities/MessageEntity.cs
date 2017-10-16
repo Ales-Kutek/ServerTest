@@ -14,4 +14,4 @@ namespace Lib.Entities
             set => message = value;
         }
     }
-}
+};
