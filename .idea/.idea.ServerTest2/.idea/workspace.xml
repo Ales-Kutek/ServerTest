@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a45fc774-6571-4380-981c-75b1ecde7426" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.ClientTest2/.idea/contentModel.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.ClientTest2/.idea/indexLayout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.ClientTest2/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.ClientTest2/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.ClientTest2/riderModule.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.ServerTest2/.idea/indexLayout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientTest2/Client.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientTest2/EntityManager.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientTest2/lib/Entities/MessageEntity.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientTest2/lib/Entity.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ClientTest2/lib/EntityList.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ServerTest2/lib/Entities/MessageEntity.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ServerTest2/lib/Entity.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ServerTest2/lib/EntityList.cs" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientTest2/Entities/Message.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ClientTest2/Entity.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ServerTest2/App/Entities/Message.cs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ServerTest2/App/Entity.cs" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientTest2/bin/Debug/ClientTest2.exe" afterPath="$PROJECT_DIR$/ClientTest2/bin/Debug/ClientTest2.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientTest2/bin/Debug/ClientTest2.pdb" afterPath="$PROJECT_DIR$/ClientTest2/bin/Debug/ClientTest2.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientTest2/obj/Debug/ClientTest2.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/ClientTest2/obj/Debug/ClientTest2.csproj.CoreCompileInputs.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientTest2/obj/Debug/ClientTest2.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/ClientTest2/obj/Debug/ClientTest2.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientTest2/obj/Debug/ClientTest2.exe" afterPath="$PROJECT_DIR$/ClientTest2/obj/Debug/ClientTest2.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientTest2/obj/Debug/ClientTest2.pdb" afterPath="$PROJECT_DIR$/ClientTest2/obj/Debug/ClientTest2.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/bin/Debug/ServerTest2.exe" afterPath="$PROJECT_DIR$/ServerTest2/bin/Debug/ServerTest2.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/bin/Debug/ServerTest2.pdb" afterPath="$PROJECT_DIR$/ServerTest2/bin/Debug/ServerTest2.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/obj/Debug/ServerTest2.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/ServerTest2/obj/Debug/ServerTest2.csproj.CoreCompileInputs.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/obj/Debug/ServerTest2.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/ServerTest2/obj/Debug/ServerTest2.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/obj/Debug/ServerTest2.exe" afterPath="$PROJECT_DIR$/ServerTest2/obj/Debug/ServerTest2.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/obj/Debug/ServerTest2.pdb" afterPath="$PROJECT_DIR$/ServerTest2/obj/Debug/ServerTest2.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.ServerTest2/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ServerTest2/.idea/contentModel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.ServerTest2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ServerTest2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.ServerTest2/riderModule.iml" afterPath="$PROJECT_DIR$/.idea/.idea.ServerTest2/riderModule.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientTest2/ClientTest2.csproj" afterPath="$PROJECT_DIR$/ClientTest2/ClientTest2.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ClientTest2/Program.cs" afterPath="$PROJECT_DIR$/ClientTest2/Program.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/App/Client.cs" afterPath="$PROJECT_DIR$/ServerTest2/App/Client.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/App/Listen.cs" afterPath="$PROJECT_DIR$/ServerTest2/App/Listen.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/App/ServerLoop.cs" afterPath="$PROJECT_DIR$/ServerTest2/App/ServerLoop.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ServerTest2/ServerTest2.csproj" afterPath="$PROJECT_DIR$/ServerTest2/ServerTest2.csproj" />
-    </list>
+    <list default="true" id="a45fc774-6571-4380-981c-75b1ecde7426" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/ServerTest2/App/Listen.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+              <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
               <folding>
                 <marker date="1508146589343" expanded="true" signature="6:112" ph="..." />
                 <marker date="1508146589343" expanded="true" signature="139:1434" ph="{...}" />
@@ -273,7 +233,7 @@
       <updated>1508083119520</updated>
       <workItem from="1508083121055" duration="2956000" />
       <workItem from="1508137681564" duration="121000" />
-      <workItem from="1508138894859" duration="7296000" />
+      <workItem from="1508138894859" duration="7311000" />
     </task>
     <task id="LOCAL-00001" summary="entity">
       <created>1508086063619</created>
@@ -282,11 +242,18 @@
       <option name="project" value="LOCAL" />
       <updated>1508086063619</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="entity convertor">
+      <created>1508146702306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1508146702306</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10373000" />
+    <option name="totallyTimeSpent" value="10388000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -331,7 +298,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="entity" />
+    <MESSAGE value="entity convertor" />
+    <option name="LAST_COMMIT_MESSAGE" value="entity convertor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -581,7 +549,7 @@
     <entry file="file://$PROJECT_DIR$/ServerTest2/App/Listen.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+          <caret line="17" column="33" lean-forward="false" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
           <folding>
             <marker date="1508146589343" expanded="true" signature="6:112" ph="..." />
             <marker date="1508146589343" expanded="true" signature="139:1434" ph="{...}" />
