@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
-using Lib;
+using EntityLib.lib;
 
 namespace ServerTest2.App
 {

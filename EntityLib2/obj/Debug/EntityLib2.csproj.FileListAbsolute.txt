@@ -1,0 +1,6 @@
+/home/ales/csharp/EntityLib2/EntityLib2/bin/Debug/EntityLib2.dll
+/home/ales/csharp/EntityLib2/EntityLib2/bin/Debug/EntityLib2.pdb
+/home/ales/csharp/EntityLib2/EntityLib2/obj/Debug/EntityLib2.csprojResolveAssemblyReference.cache
+/home/ales/csharp/EntityLib2/EntityLib2/obj/Debug/EntityLib2.csproj.CoreCompileInputs.cache
+/home/ales/csharp/EntityLib2/EntityLib2/obj/Debug/EntityLib2.dll
+/home/ales/csharp/EntityLib2/EntityLib2/obj/Debug/EntityLib2.pdb

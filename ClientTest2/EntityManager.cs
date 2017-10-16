@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using Lib;
+using EntityLib.lib;
 
 namespace ClientTest2
 {
@@ -54,6 +54,8 @@ namespace ClientTest2
 
         public void RequestNewEntity(Entity entity)
         {
+            entity.Time = DateTime.Now.Millisecond;
+
             IFormatter formatter = new BinaryFormatter();
             MemoryStream ms = new MemoryStream();
 

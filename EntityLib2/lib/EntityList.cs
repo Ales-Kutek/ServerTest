@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Lib
+namespace EntityLib.lib
 {
     public class EntityList: List<Entity>
     {

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityLib2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>../../EntityLib2/EntityLib2/bin/Debug/EntityLib2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,9 +46,6 @@
   <ItemGroup>
     <Compile Include="Client.cs" />
     <Compile Include="EntityManager.cs" />
-    <Compile Include="lib\Entities\MessageEntity.cs" />
-    <Compile Include="lib\Entity.cs" />
-    <Compile Include="lib\EntityList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

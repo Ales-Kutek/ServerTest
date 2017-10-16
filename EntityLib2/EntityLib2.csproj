@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E49FC973-169F-4FB0-8354-629DC812DBBE}</ProjectGuid>
+    <ProjectGuid>{AF4688AB-FECB-45B9-AA34-8BA94A7F2612}</ProjectGuid>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ServerTest2</RootNamespace>
-    <AssemblyName>ServerTest2</AssemblyName>
+    <RootNamespace>EntityLib2</RootNamespace>
+    <AssemblyName>EntityLib2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,23 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityLib2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\EntityLib2\EntityLib2\bin\Debug\EntityLib2.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App\Client.cs" />
-    <Compile Include="App\EntityManaging\EntityManager.cs" />
-    <Compile Include="App\Listen.cs" />
-    <Compile Include="App\Server.cs" />
-    <Compile Include="App\ServerLoop.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="lib\Entities\MessageEntity.cs" />
+    <Compile Include="lib\Entity.cs" />
+    <Compile Include="lib\EntityList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lib.Entities
+namespace EntityLib.lib.Entities
 {
     [Serializable]
     public class MessageEntity: Entity

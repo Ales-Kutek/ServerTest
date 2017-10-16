@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lib
+namespace EntityLib.lib
 {
     [Serializable]
     public abstract class Entity

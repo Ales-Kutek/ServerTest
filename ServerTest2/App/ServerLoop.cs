@@ -7,80 +7,69 @@ using System.Net.Sockets;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
-using Lib.Entities;
+using EntityLib.lib;
+using EntityLib.lib.Entities;
+using ServerTest2.App.EntityManaging;
 
 namespace ServerTest2.App
 {
     public class ServerLoop
     {
+        public EntityManager EntityManager { get; } = new EntityManager();
+
         public void Process(List <Client> clients)
         {
             foreach (var client in clients)
             {
-                string buffer = ReadBuffer(client.GetTcpClient());
-
-                if (buffer.Length != 0)
-                {
-                    ProcessRequest(buffer, client.GetTcpClient());
-                }
+                ReadBuffer(client);
             }
         }
 
         private void ProcessRequest(string buffer, TcpClient client)
         {
-//            Console.WriteLine(buffer);
-
             byte[] bytes = Encoding.ASCII.GetBytes("OK");
 
             client.GetStream().Write(bytes, 0, bytes.Length);
             client.GetStream().Flush();
         }
 
-        private string ReadBuffer(TcpClient client)
+        private bool ReadBuffer(Client client)
         {
             List<int> buffer = new List<int>();
-            NetworkStream stream = client.GetStream();
+            NetworkStream stream = client.GetTcpClient().GetStream();
 
             while (stream.DataAvailable)
             {
                 buffer.Add(stream.ReadByte());
             }
 
-            string result = Encoding.UTF8.GetString(buffer.Select<int, byte>(b => (byte) b).ToArray(), 0, buffer.Count);
+            byte[] result = buffer.Select<int, byte>(b => (byte) b).ToArray();
 
             if (result.Length == 0)
             {
-                return result;
+                return false;
             }
 
-            Console.WriteLine("byte");
-
-            byte[] byteResult = Encoding.ASCII.GetBytes(result);
-
-            Console.WriteLine(byteResult.Length);
-
             MemoryStream ms = new MemoryStream();
-            ms.Write(byteResult, 0, byteResult.Length);
+            ms.Write(result, 0, result.Length);
             ms.Flush();
 
             IFormatter formatter = new BinaryFormatter();
 
             ms.Position = 0;
 
-            Console.WriteLine("beofre");
-
             try
             {
-                var obj = (MessageEntity) formatter.Deserialize(ms);
+                Entity entity = (MessageEntity) formatter.Deserialize(ms);
+
+                this.EntityManager.ResolveEntity(entity);
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception.Message);
             }
 
-            Console.WriteLine("after");
-
-            return result;
+            return true;
         }
     }
 }
