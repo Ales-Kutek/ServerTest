@@ -42,11 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\Client.cs" />
-    <Compile Include="App\Entities\Message.cs" />
-    <Compile Include="App\Entity.cs" />
     <Compile Include="App\Listen.cs" />
     <Compile Include="App\Server.cs" />
     <Compile Include="App\ServerLoop.cs" />
+    <Compile Include="lib\Entities\MessageEntity.cs" />
+    <Compile Include="lib\Entity.cs" />
+    <Compile Include="lib\EntityList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

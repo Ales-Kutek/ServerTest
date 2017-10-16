@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net.Sockets;
+using Lib;
 
 namespace ServerTest2.App
 {
@@ -8,6 +10,8 @@ namespace ServerTest2.App
         protected TcpClient TcpClient;
 
         protected int tempId;
+
+        protected EntityList entities = new EntityList();
 
         public Client(TcpClient tcpClient)
         {
@@ -18,6 +22,11 @@ namespace ServerTest2.App
         public TcpClient GetTcpClient()
         {
             return this.TcpClient;
+        }
+
+        public EntityList GetEntityList()
+        {
+            return this.entities;
         }
     }
 }

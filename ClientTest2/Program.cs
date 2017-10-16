@@ -4,53 +4,36 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Lib.Entities;
 
 namespace ClientTest2
 {
     internal class Program
     {
-        private static string ReadBuffer(TcpClient client)
-        {
-            List<int> buffer = new List<int>();
-            NetworkStream stream = client.GetStream();
-            int readByte;
-
-            while (stream.DataAvailable)
-            {
-                buffer.Add(stream.ReadByte());
-            }
-
-            string result = Encoding.UTF8.GetString(buffer.Select<int, byte>(b => (byte) b).ToArray(), 0, buffer.Count);
-
-            return result;
-        }
-
         public static void Main(string[] args)
         {
-            try // 1
-            {
-               TcpClient client = new TcpClient("127.0.0.1", 8081);
+//            try // 1
+//            {
+               TcpClient tcp = new TcpClient("127.0.0.1", 8081);
 
-                while (true)
-                {
-                    var message = Console.ReadLine();
-                    var buffer = Encoding.ASCII.GetBytes(message);
+                Client me = new Client(tcp);
 
-                    Console.WriteLine(buffer.Length);
+//                while (true)
+//                {
+                    MessageEntity message = new MessageEntity();
 
-                    client.GetStream().Write(buffer, 0, buffer.Length);
-                    client.GetStream().Flush();
+                    message.Message = Console.ReadLine();
 
-                    Console.WriteLine(ReadBuffer(client));
-                }
+                    me.EntityManager.RequestNewEntity(message);
+//                }
 
 
                 Console.ReadKey();
-            }
-            catch // 1
-            {
-                Console.WriteLine("not connected..b.");
-            }
+//            }
+//            catch (Exception exception)
+//            {
+//                Console.WriteLine("not connected..b.");
+//            }
         }
     }
 }

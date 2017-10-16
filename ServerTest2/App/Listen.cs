@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
+using System.Timers;
 
 namespace ServerTest2.App
 {
@@ -26,7 +27,9 @@ namespace ServerTest2.App
 
         private void ListeningProcess(TcpListener listener, List<Client> clients)
         {
-            while (true)
+            Timer timer = new Timer(1000);
+
+            timer.Elapsed += delegate(object sender, ElapsedEventArgs args)
             {
                 try
                 {
@@ -44,7 +47,9 @@ namespace ServerTest2.App
                 {
                     Console.WriteLine(e.Message);
                 }
-            }
+            };
+
+            timer.Start();
         }
     }
 }
