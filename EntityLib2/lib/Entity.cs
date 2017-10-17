@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace EntityLib.lib
 {
@@ -8,6 +9,10 @@ namespace EntityLib.lib
         private int id;
 
         private int time;
+
+        private int backHash;
+
+        public abstract void Update(Entity entity);
 
         public int Id
         {
@@ -19,6 +24,12 @@ namespace EntityLib.lib
         {
             get => time;
             set => time = value;
+        }
+
+        public int BackHash
+        {
+            get => backHash;
+            set => backHash = value;
         }
     }
 }
