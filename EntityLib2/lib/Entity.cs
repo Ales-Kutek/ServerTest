@@ -12,8 +12,6 @@ namespace EntityLib.lib
 
         private int backHash;
 
-        public abstract void Update(Entity entity);
-
         public int Id
         {
             get => id;

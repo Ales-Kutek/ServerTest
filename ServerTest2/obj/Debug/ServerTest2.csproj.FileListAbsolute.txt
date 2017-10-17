@@ -11,3 +11,4 @@
 /home/ales/csharp/ServerTest/ServerTest2/obj/Debug/ServerTest2.exe
 /home/ales/csharp/ServerTest/ServerTest2/obj/Debug/ServerTest2.pdb
 /home/ales/csharp/ServerTest/ServerTest2/bin/Debug/EntityLib2.pdb
+/home/ales/csharp/ServerTest/ServerTest2/bin/Debug/EntityLib2.dll

@@ -60,9 +60,9 @@ namespace ServerTest2.App
 
             try
             {
-                Entity entity = (MessageEntity) formatter.Deserialize(ms);
+                var entity = (Entity) formatter.Deserialize(ms);
 
-                this.EntityManager.ResolveEntity(entity);
+                this.EntityManager.ResolveEntity(entity, client);
             }
             catch (Exception exception)
             {

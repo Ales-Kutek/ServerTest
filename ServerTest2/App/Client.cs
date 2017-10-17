@@ -11,7 +11,7 @@ namespace ServerTest2.App
 
         protected int tempId;
 
-        protected EntityList entities = new EntityList();
+        protected Dictionary<int, Entity> entities = new Dictionary<int, Entity>();
 
         public Client(TcpClient tcpClient)
         {
@@ -24,7 +24,7 @@ namespace ServerTest2.App
             return this.TcpClient;
         }
 
-        public EntityList GetEntityList()
+        public Dictionary<int, Entity> GetEntityList()
         {
             return this.entities;
         }

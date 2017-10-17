@@ -8,11 +8,6 @@ namespace EntityLib.lib.Entities
         public string message;
         public string objectName = "MessageEntity";
 
-        public override void Update(Entity entity)
-        {
-            entity = (MessageEntity) entity;
-        }
-
         public string Message
         {
             get => message;
