@@ -11,3 +11,4 @@
 /home/ales/csharp/ServerTest/ClientTest2/obj/Debug/ClientTest2.exe
 /home/ales/csharp/ServerTest/ClientTest2/obj/Debug/ClientTest2.pdb
 /home/ales/csharp/ServerTest/ClientTest2/bin/Debug/EntityLib2.pdb
+/home/ales/csharp/ServerTest/ClientTest2/bin/Debug/ClientTest2.exe.manifest

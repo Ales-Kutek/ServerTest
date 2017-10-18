@@ -14,7 +14,7 @@ namespace ServerTest2.App
 
             try
             {
-                listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 8081);
+                listener = new TcpListener(IPAddress.Parse("37.157.196.20"), 8888);
                 listener.Start();
 
                 this.ListeningProcess(listener, clients);

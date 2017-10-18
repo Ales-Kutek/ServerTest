@@ -17,6 +17,7 @@ namespace ClientTest2
         {
 //            try // 1
 //            {
+//               TcpClient tcp = new TcpClient("127.0.0.1", 8081);
                TcpClient tcp = new TcpClient("127.0.0.1", 8081);
 
                 Client me = new Client(tcp);
