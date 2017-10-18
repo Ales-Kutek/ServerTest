@@ -21,10 +21,10 @@ namespace ServerTest2.App.EntityManaging.EntityServices
             MessageEntity clientCast = (MessageEntity) clientEntity;
             Client client = (Client) serverCast.Owner;
 
-            Console.WriteLine("Server" + serverCast.Message);
-            Console.WriteLine("Client" + clientCast.Message);
+//            Console.WriteLine("Server" + serverCast.Message);
+//            Console.WriteLine("Client" + clientCast.Message);
 
-            serverCast.Message = clientCast.Message;
+            serverCast.Message = client.tempId.ToString() + ":" + clientCast.Message;
 
             client.RoomStream.Add(serverCast);
         }

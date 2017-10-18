@@ -41,14 +41,19 @@ namespace ServerTest2.App
 
             ServerLoop loop = new ServerLoop();
 
-            timer.Elapsed += delegate(object sender, ElapsedEventArgs args)
+//            timer.Elapsed += delegate(object sender, ElapsedEventArgs args)
+//            {
+            while (true)
             {
                 var clients = this.GetTcpClients().ToList();
 
                 loop.Process(clients);
-            };
 
-            timer.Start();
+                Thread.Sleep(20);
+            }
+//            };
+
+//            timer.Start();
 
             Console.ReadKey();
         }

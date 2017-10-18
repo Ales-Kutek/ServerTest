@@ -17,12 +17,14 @@ namespace EntityLib.lib
         [NonSerialized]
         private Owner owner;
 
+        [NonSerialized]
+        private List<Action<Entity>> onUpdate = new List<Action<Entity>>();
+
         protected Entity(Owner owner)
         {
             this.owner = owner;
         }
 
-        private List<Action<Entity>> onUpdate = new List<Action<Entity>>();
 
         public void Update(Entity entity)
         {

@@ -36,20 +36,34 @@ namespace ClientTest2
             client.Tcp.GetStream().Flush();
         }
 
-        public string ReadBuffer()
+        public Entity[] ReadBuffer()
         {
             List<int> buffer = new List<int>();
             NetworkStream stream = this.client.Tcp.GetStream();
-            int readByte;
 
             while (stream.DataAvailable)
             {
                 buffer.Add(stream.ReadByte());
             }
 
-            string result = Encoding.UTF8.GetString(buffer.Select<int, byte>(b => (byte) b).ToArray(), 0, buffer.Count);
+            byte[] result = buffer.Select<int, byte>(b => (byte) b).ToArray();
 
-            return result;
+            if (result.Length == 0)
+            {
+                throw new Exception("No result");
+            }
+
+            MemoryStream ms = new MemoryStream();
+            ms.Write(result, 0, result.Length);
+            ms.Flush();
+
+            IFormatter formatter = new BinaryFormatter();
+
+            ms.Position = 0;
+
+            Entity[] entity = (Entity[]) formatter.Deserialize(ms);
+
+            return entity;
         }
 
         public void RequestNewEntity(Entity entity)

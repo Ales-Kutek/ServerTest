@@ -37,6 +37,7 @@ namespace ServerTest2.App
             {
                 foreach (Client client in clients)
                 {
+                    Console.WriteLine("write to " + client.tempId);
                     client.ReadRoomStream.Add(entity);
                 }
             }

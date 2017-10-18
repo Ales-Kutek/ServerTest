@@ -15,7 +15,7 @@ namespace ServerTest2.App
     {
         protected TcpClient TcpClient;
 
-        protected int tempId;
+        public int tempId;
 
         protected Dictionary<int, Entity> entities = new Dictionary<int, Entity>();
 
@@ -91,19 +91,21 @@ namespace ServerTest2.App
 
         public void SendRoomStream()
         {
-            if (RoomStream.Count != 0)
+            if (ReadRoomStream.Count != 0)
             {
                 IFormatter formatter = new BinaryFormatter();
 
-                foreach (Entity entity in RoomStream)
-                {
-                    var networkStream = this.GetTcpClient().GetStream();
+                Entity[] entities = ReadRoomStream.ToArray();
 
-                    formatter.Serialize(networkStream, entity);
-                    networkStream.Flush();
-                }
+                var networkStream = this.GetTcpClient().GetStream();
+
+                formatter.Serialize(networkStream, entities);
+                networkStream.Flush();
+
+                Console.WriteLine("clear in " + this.tempId);
 
                 RoomStream.Clear();
+                ReadRoomStream.Clear();
             }
         }
     }

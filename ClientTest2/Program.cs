@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
+using EntityLib.lib;
 using EntityLib.lib.Entities;
 
 namespace ClientTest2
@@ -21,8 +23,6 @@ namespace ClientTest2
 
                 while (true)
                 {
-                    Console.WriteLine("tell me something nice...");
-
                     MessageEntity message = new MessageEntity();
 
                     message.Message = Console.ReadLine();
@@ -31,9 +31,20 @@ namespace ClientTest2
 
                     Thread.Sleep(1000);
 
-                    string buffer = me.EntityManager.ReadBuffer();
+                    try
+                    {
+                        Entity[] entities = me.EntityManager.ReadBuffer();
 
-                    Console.WriteLine("buffer:" + buffer);
+                        foreach (Entity readEntity in entities)
+                        {
+                            var messageEntity = (MessageEntity) readEntity;
+                            Console.WriteLine(messageEntity.Message);
+                        }
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine(exception.Message);
+                    }
                 }
 
                 Console.ReadKey();
