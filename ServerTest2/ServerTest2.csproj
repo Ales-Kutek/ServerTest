@@ -47,6 +47,7 @@
     <Compile Include="App\Client.cs" />
     <Compile Include="App\EntityManaging\EntityManager.cs" />
     <Compile Include="App\EntityManaging\EntityServiceList.cs" />
+    <Compile Include="App\EntityManaging\EntityServices\MessageService.cs" />
     <Compile Include="App\EntityManaging\Service.cs" />
     <Compile Include="App\Listen.cs" />
     <Compile Include="App\Server.cs" />

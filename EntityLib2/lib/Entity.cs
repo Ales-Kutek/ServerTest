@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 
 namespace EntityLib.lib
@@ -11,6 +12,22 @@ namespace EntityLib.lib
         private int time;
 
         private int backHash;
+
+        private List<Action<Entity>> onUpdate = new List<Action<Entity>>();
+
+        public void Update(Entity entity)
+        {
+            foreach (Action<Entity> ev in onUpdate)
+            {
+                ev(entity);
+            }
+        }
+
+        public List<Action<Entity>> OnUpdate
+        {
+            get => onUpdate;
+//            set => onUpdate = value;
+        }
 
         public int Id
         {

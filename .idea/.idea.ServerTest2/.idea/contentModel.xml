@@ -9,6 +9,9 @@
           <e p="EntityManaging" t="Include">
             <e p="EntityManager.cs" t="Include" />
             <e p="EntityServiceList.cs" t="Include" />
+            <e p="EntityServices" t="Include">
+              <e p="MessageService.cs" t="Include" />
+            </e>
             <e p="Service.cs" t="Include" />
           </e>
           <e p="Listen.cs" t="Include" />

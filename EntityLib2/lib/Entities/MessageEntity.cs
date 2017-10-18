@@ -6,7 +6,6 @@ namespace EntityLib.lib.Entities
     public class MessageEntity: Entity
     {
         public string message;
-        public string objectName = "MessageEntity";
 
         public string Message
         {
