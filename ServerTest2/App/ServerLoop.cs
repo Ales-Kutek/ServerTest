@@ -19,57 +19,27 @@ namespace ServerTest2.App
 
         public void Process(List <Client> clients)
         {
-            foreach (var client in clients)
+            foreach (Client client in clients)
             {
-                ReadBuffer(client);
+                client.ReadBuffer(this.EntityManager);
+
+                if (client.RoomStream.Count != 0)
+                {
+                    WriteRoomStream(clients, client);
+                    client.SendRoomStream();
+                }
             }
         }
 
-        private void ProcessRequest(string buffer, TcpClient client)
+        private void WriteRoomStream(List<Client> clients, Client sourceClient)
         {
-            byte[] bytes = Encoding.ASCII.GetBytes("OK");
-
-            client.GetStream().Write(bytes, 0, bytes.Length);
-            client.GetStream().Flush();
-        }
-
-        private bool ReadBuffer(Client client)
-        {
-            List<int> buffer = new List<int>();
-            NetworkStream stream = client.GetTcpClient().GetStream();
-
-            while (stream.DataAvailable)
+            foreach (Entity entity in sourceClient.RoomStream)
             {
-                buffer.Add(stream.ReadByte());
+                foreach (Client client in clients)
+                {
+                    client.ReadRoomStream.Add(entity);
+                }
             }
-
-            byte[] result = buffer.Select<int, byte>(b => (byte) b).ToArray();
-
-            if (result.Length == 0)
-            {
-                return false;
-            }
-
-            MemoryStream ms = new MemoryStream();
-            ms.Write(result, 0, result.Length);
-            ms.Flush();
-
-            IFormatter formatter = new BinaryFormatter();
-
-            ms.Position = 0;
-
-            try
-            {
-                var entity = (Entity) formatter.Deserialize(ms);
-
-                this.EntityManager.ResolveEntity(entity, client);
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception.Message);
-            }
-
-            return true;
         }
     }
 }

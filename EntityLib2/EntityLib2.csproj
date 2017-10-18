@@ -42,6 +42,7 @@
     <Compile Include="lib\Entities\MessageEntity.cs" />
     <Compile Include="lib\Entity.cs" />
     <Compile Include="lib\EntityList.cs" />
+    <Compile Include="lib\Owner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

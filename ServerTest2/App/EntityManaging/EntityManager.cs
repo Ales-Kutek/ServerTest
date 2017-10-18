@@ -17,7 +17,7 @@ namespace ServerTest2.App.EntityManaging
             _entityServiceList.Add(typeof(MessageEntity).FullName, new MessageService(this));
         }
 
-        public void ResolveEntity(Entity entity, Client client)
+        public void SyncEntity(Entity entity, Client client)
         {
             var entityList = client.GetEntityList();
 
@@ -30,12 +30,12 @@ namespace ServerTest2.App.EntityManaging
 
                 if (entityService.ResolveNew(entity))
                 {
-                    Entity newInstance = (Entity) Activator.CreateInstance(type);
+                    Entity newInstance = (Entity) Activator.CreateInstance(type, client);
                     entityList.Add(entity.BackHash, newInstance);
 
-                    newInstance.OnUpdate.Add(delegate(Entity updated)
+                    newInstance.OnUpdate.Add(delegate(Entity updatedEntity)
                     {
-                        entityService.Update(newInstance, updated);
+                        entityService.Update(newInstance, updatedEntity);
                     });
 
                     newInstance.Update(entity);

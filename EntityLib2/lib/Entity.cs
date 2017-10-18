@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Security.Cryptography.X509Certificates;
 
 namespace EntityLib.lib
 {
@@ -12,6 +13,14 @@ namespace EntityLib.lib
         private int time;
 
         private int backHash;
+
+        [NonSerialized]
+        private Owner owner;
+
+        protected Entity(Owner owner)
+        {
+            this.owner = owner;
+        }
 
         private List<Action<Entity>> onUpdate = new List<Action<Entity>>();
 
@@ -28,6 +37,8 @@ namespace EntityLib.lib
             get => onUpdate;
 //            set => onUpdate = value;
         }
+
+        public Owner Owner => owner;
 
         public int Id
         {

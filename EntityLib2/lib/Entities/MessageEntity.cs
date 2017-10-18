@@ -7,6 +7,10 @@ namespace EntityLib.lib.Entities
     {
         public string message;
 
+        public MessageEntity(Owner owner) : base(owner)
+        {
+        }
+
         public string Message
         {
             get => message;

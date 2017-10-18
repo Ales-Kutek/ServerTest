@@ -17,11 +17,16 @@ namespace ServerTest2.App.EntityManaging.EntityServices
 
         public override void Update(Entity serverEntity, Entity clientEntity)
         {
-            MessageEntity server = (MessageEntity) serverEntity;
-            MessageEntity client = (MessageEntity) clientEntity;
+            MessageEntity serverCast = (MessageEntity) serverEntity;
+            MessageEntity clientCast = (MessageEntity) clientEntity;
+            Client client = (Client) serverCast.Owner;
 
-            Console.WriteLine("Server" + server.Message);
-            Console.WriteLine("Client" + client.Message);
+            Console.WriteLine("Server" + serverCast.Message);
+            Console.WriteLine("Client" + clientCast.Message);
+
+            serverCast.Message = clientCast.Message;
+
+            client.RoomStream.Add(serverCast);
         }
     }
 }

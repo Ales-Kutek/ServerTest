@@ -36,7 +36,7 @@ namespace ClientTest2
             client.Tcp.GetStream().Flush();
         }
 
-        private string ReadBuffer()
+        public string ReadBuffer()
         {
             List<int> buffer = new List<int>();
             NetworkStream stream = this.client.Tcp.GetStream();
